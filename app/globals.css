@@ -1,0 +1,412 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+   display: none;
+}
+.scrollbar-hide {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+.portfolio-bg{
+  background-color: black;
+}
+
+.blog-content {
+   padding: 30px 0;
+}
+
+.blog-content b {
+   margin-bottom: 10px;
+   font-weight: 500;
+}
+
+.blog-content p {
+   margin-bottom: 10px;
+}
+
+.blog-content h1 {
+   margin-bottom: 10px;
+   font-weight: 600;
+   font-size: 36px;
+}
+
+.blog-content h2 {
+   margin-bottom: 10px;
+   font-weight: 500;
+   font-size: 22px;
+}
+
+.blog-content h3 {
+   margin-bottom: 10px;
+   font-weight: 500;
+   font-size: 18px;
+}
+
+@keyframes slideToCenter {
+   0% {
+     transform: translateX(-100%); /* Start off-screen to the left */
+     opacity: 0; /* Optional: Start invisible */
+   }
+   50% {
+     transform: translateX(0); /* Move to center */
+     opacity: 1; /* Optional: Fully visible */
+   }
+   100% {
+     transform: translateX(0); /* Stay in place */
+     opacity: 1;
+   }
+}
+
+.moving-text {
+   display: block; /* For paragraphs to behave normally */
+   white-space: normal; /* Allows line breaks */
+   animation: slideToCenter 2s ease forwards; /* Animates movement from left to center */
+}
+
+.moving-text-container {
+   background-image: url('/bg9.png');
+   background-size: cover; /* Ensures the image covers the entire container */
+   background-position: center; /* Keeps the image centered */
+   background-repeat: no-repeat; /* Prevents the image from repeating */
+   padding: 20px; /* Adds some padding around the text */
+}
+.about-bg {
+  background-image: url('/ab-bg.jpeg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+
+.restaurent-bg {
+   background-image: url('/iced.jpg');
+   background-size: cover; /* Ensures the image covers the entire container */
+   background-position: center; /* Keeps the image centered */
+   background-repeat: no-repeat; /* Prevents the image from repeating */
+   transition: transform 0.5s ease;
+   width: 100%;
+   height: 50vh;
+   padding: 20px;
+}
+
+.hotel-slide {
+  background-size: contain;
+background-repeat: no-repeat;
+  
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 400px;
+  height: 60vh;
+  margin: 10px;
+  border-radius: 12px;
+  transition: transform 0.5s ease, height 0.5s ease;
+  animation: fadeSlide 0.8s ease-in-out;
+}
+
+.large {
+  transform: scale(1.05);
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .hotel-slide {
+    height: 40vh;
+    max-width: 90%;
+  }
+}
+
+
+
+
+.rotating-ht-container {
+   background-image: url('/bg9.png');
+   background-size: cover; /* Ensures the image covers the entire container */
+   background-position: center; /* Keeps the image centered */
+   background-repeat: no-repeat; /* Prevents the image from repeating */
+   padding: 20px; /* Adds some padding around the text */
+   animation: rotate-background 20s linear infinite; /* Adds rotation animation */
+}
+
+@keyframes rotate-background {
+   0% {
+     transform: rotate(0deg); /* Start at original position */
+   }
+   100% {
+     transform: rotate(360deg); /* Rotate a full circle */
+   }
+}
+
+
+/*---------------------image rotating-----------------------*/
+
+.rotating-img-container {
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Adds some padding around the text */
+  animation: rotate-imgbackground 20s linear infinite; /* Adds rotation animation */
+}
+
+@keyframes rotate-imgbackground {
+  0% {
+    transform: rotate(0deg); /* Start at original position */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate a full circle */
+  }
+}
+
+
+
+
+
+
+
+/*--------------Leaf animation----------------------*/
+
+ @keyframes leafMove {
+   0% {
+     transform: translateX(0);
+   }
+   50% {
+     transform: translateX(10px);
+   }
+   100% {
+     transform: translateX(0);
+   }
+ }
+ 
+ .leaf-animation {
+   animation: leafMove 1s infinite ease-in-out;
+ }
+ /*------------------------------Zoom in zoom out --------------------------*/
+ @keyframes zoomsec {
+   0% {
+     transform: translateX(0) scale(1); /* Start at normal size */
+   }
+   50% {
+     transform: translateX(10px) scale(1.2); /* Zoom in */
+   }
+   100% {
+     transform: translateX(0) scale(1); /* Back to normal size */
+   }
+ }
+ 
+ .zoomsec {
+   animation: zoomsec 4s infinite ease-in-out;
+ }
+
+ /*------------------portfolio----------------------*/
+ .portfolio-bg {
+  background-image: url('/p-bg.png');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 50vh; /* Sets the height to 100% of the viewport height */ /* Padding for the content inside */
+ 
+}
+.portfolio2-bg {
+  background-image: url('/p3-bg.png');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 50vh; /* Sets the height to 100% of the viewport height */ /* Padding for the content inside */
+ 
+}
+.blog-content p {
+  margin-bottom: 1em; /* Adds space between paragraphs */
+  line-height: 1.6;   /* Increases line height for readability */
+}
+.blog-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px auto;
+  padding: 10px 20px;
+  max-width: 800px;
+}
+
+
+.blog-content h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #444;
+}
+
+.highlighted-link {
+  color: #2a664e; /* Choose your desired color */
+  font-weight: bold;
+  text-decoration: none;
+}
+.highlighted-link:hover {
+  text-decoration: underline;
+}
+
+
+ /* start */
+
+ .start p {
+  position: relative;
+  padding-left: 50px; /* To make room for the star */
+  font-size: 16px;
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Vertically align the items */
+  gap: 10px; /* Space between the star and the line */
+}
+
+.star {
+  font-size: 24px; /* Size of the star */
+  background: linear-gradient(45deg, #47bcc0, #ae55c7); /* Gradient background */
+  -webkit-background-clip: text; /* Apply the gradient to the text */
+  color: transparent; /* Make the star text transparent to show the gradient */
+}
+
+.line {
+  display: inline-block;
+  width: 2px; /* Width of the line */
+  height: 20px; /* Height of the line */
+  background: linear-gradient(45deg, #47bcc0, #ae55c7); /* Same gradient as the star */
+  position: absolute;
+  top: 100%; /* Position the line below the star */
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+
+/* ----------------border movements----------------- */
+/* Standard border animation for the about comp div */
+
+/* Use this class name in JSX: animate-borderab */
+/* Clean, modern animated gradient border */
+.animate-borderab {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Glowing animated border */
+.animate-borderab::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    270deg,
+    #d3ad3c,
+    #87ceeb,
+    #ffffff,
+    #d3ad3c,
+    #87ceeb
+  );
+  background-size: 600% 600%;
+  animation: borderFlow 6s ease infinite;
+  z-index: -1;
+  border-radius: 1.5rem;
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.animate-bordera {
+  position: relative;
+  padding: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;  /* Makes sure the background doesn't cover the border */
+  animation: borderAnimation 3s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-top-color: #191719;   /* Start with top border */
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: transparent;
+    border-right-color: #161616; /* Move to right border */
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #0d0c0d; /* Move to bottom border */
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #110f11;  /* Move to left border */
+  }
+  100% {
+    border-top-color: #100f10;   /* Cycle back to top border */
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+/* Clean, modern animated gradient border -BLACK AND WHITE */
+.animate-borderabc {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Glowing animated border */
+.animate-borderabc::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    270deg,
+    #fcfbf8,
+    #3f4041,
+    #e8e8cd,
+    #3f4041,
+    #fdfbfb /* removed trailing comma here */
+  );
+  background-size: 600% 600%;
+  animation: borderFlow 6s ease infinite;
+  z-index: -1;
+  border-radius: 1.5rem;
+}
