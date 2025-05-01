@@ -38,7 +38,7 @@ const Aboutus = () => {
               <h3 className="text-xl sm:text-3xl font-medium text-black mb-6">ABOUT US</h3>
               <p className="text-[18px] text-[#7d7e84] leading-[1.55] font-[400] font-['Poppins']">
                 Tomahawk offers a wide variety of menu options including fresh pastries, salads, burgers, and more.
-                Whether you're a resident or a visitor, we invite you to explore Tomahawk Café and discover why it’s considered the best café on Reem Island.
+                Whether you are a resident or a visitor, we invite you to explore Tomahawk Café and discover why it is considered the best café on Reem Island.
                 Enjoy our comfortable outdoor seating, perfect for sipping coffee in the fresh air.
                 Plus, our café provides free Wi-Fi in every corner, making it an ideal place to work, study, or connect with friends.
                 Tomahawk is your go-to spot for creativity, comfort, and productivity.
